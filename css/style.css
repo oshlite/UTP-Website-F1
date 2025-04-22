@@ -1,0 +1,667 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+
+/* nav part start */
+.menu_bg{
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(28, 30, 83, 1);
+    z-index: 9999;
+}
+.menu_bg ul li a{
+    color: rgba(187, 187, 203, 1) !important;
+    padding: 10px 18px !important;
+    position: relative;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.contact a{
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 12px 24px;
+    font-family: poppins;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+}
+.contact a:hover{
+    background-color: rgba(252, 217, 128, 1);
+    color: #1C1E53;
+}
+/* nav part end */
+/* banner part start */
+#banner{
+    background-color: #1C1E53;
+    padding: 200px 0;
+}
+.banner_text h2{
+    font-family: Poppins;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 74px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+.banner_text p{
+    padding-top: 24px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+
+}
+.banner_text a{
+    color: rgba(255, 255, 255, 1);
+    margin: 48px 10px 0px 0px;
+    padding: 10px 10px;
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-radius: 25px;
+}
+.banner_text a:hover{
+    background-color: rgba(252, 217, 128, 1);
+    color: rgba(27, 28, 43, 1);
+    
+}
+/* banner part end */
+/* work part start */
+#work_main{
+    padding-top: 128px;
+    background-color: rgba(244, 246, 252, 1);
+}
+.work h2{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+}
+.work p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.work a{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    padding-top: 16px;
+}
+.work_text h2{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;
+}
+.work_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.work_textt{
+    padding: 48px 0;
+}
+.work_textt h2{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;
+}
+.work_textt p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+/* work part end */
+/* our project part start */
+#our_project{
+    padding-top: 128px;
+}
+.projectt_img img{
+    padding: 10px 0;
+}
+.project_text{
+    margin-bottom: 60px;
+}
+.project_text h2{
+    font-family: Poppins;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+}
+.project_text a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-top: 24px;
+    padding-left: 50px;
+}
+.project_img{
+    position: relative;
+}
+.project_overly{
+    position: absolute;
+    background: linear-gradient(90deg, rgba(28, 30, 84, 0) 0%, rgba(34, 114, 252, 0.144) 100%);
+    background: -moz-linear-gradient(90deg, rgba(28, 30, 84, 0.164) 0%, rgba(34, 114, 252, 0.055) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(238, 50%, 22%, 1) 0%, rgba(34, 114, 252, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E53", endColorstr="#2472FC", GradientType=1 );
+    height: 100%;
+    width: 45%;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 1;
+}
+.project_img:hover .project_overly{
+    width: 100%;
+}
+.overly_text{
+    position: absolute;
+    bottom: 76px;
+    left: 40px;
+    width: 40%;
+    opacity: 1;
+}
+.overly_text h3{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #fff;
+    padding-bottom: 16px;
+}
+.overly_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    color: #fff;
+    padding-bottom: 40px;
+}
+.overly_text a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    color: rgba(252, 217, 128, 1);
+}
+.one{
+    position: relative;
+}
+.projectt_overly{
+    position: absolute;
+    background: linear-gradient(90deg, rgba(28, 30, 84, 0) 0%, rgba(34, 114, 252, 0.144) 100%);
+    background: -moz-linear-gradient(90deg, rgba(28, 30, 84, 0.164) 0%, rgba(34, 114, 252, 0.055) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(238, 50%, 22%, 1) 0%, rgba(34, 114, 252, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E53", endColorstr="#2472FC", GradientType=1 );
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.one:hover .projectt_overly{
+    opacity: 1;
+}
+.overly_textt{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    width: 50%;
+    opacity: 1;
+}
+.overly_textt h3{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #fff;
+    padding-bottom: 16px;
+}
+.overly_textt a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    color: rgba(252, 217, 128, 1);
+}
+.two{
+    position: relative;
+}
+.projecttt_overly{
+    position: absolute;
+    background: linear-gradient(90deg, rgba(28, 30, 84, 0) 0%, rgba(34, 114, 252, 0.144) 100%);
+    background: -moz-linear-gradient(90deg, rgba(28, 30, 84, 0.164) 0%, rgba(34, 114, 252, 0.055) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(238, 50%, 22%, 1) 0%, rgba(34, 114, 252, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E53", endColorstr="#2472FC", GradientType=1 );
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.two:hover .projecttt_overly{
+    opacity: 1;
+}
+.overly_texttt{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    width: 50%;
+    opacity: 1;
+}
+.overly_texttt h3{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #fff;
+    padding-bottom: 16px;
+}
+.overly_texttt a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    color: rgba(252, 217, 128, 1);
+}
+.fa-arrow-right{
+    padding-left: 5px;
+}
+/* our project part end */
+/* design solves part start */
+#design{
+    padding-top: 128px;
+    background-color: rgba(244, 246, 252, 1);
+}
+.design_textt h3{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+}
+.design_textt p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.design_text{
+    padding: 20px 20px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 1);
+    border: 0.5px solid #E3E3E3;
+}
+.design_text img{
+    padding: 30px 0 25px 30px;
+}
+.design_text h3{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    padding-left: 30px;
+}
+.design_text h4{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding: 12px 0 40px 30px;
+}
+/* design solves part end */
+/* clients part start */
+.clients_text{
+    padding-top: 130px;
+}
+.clients_textt{
+    padding-top: 130px;
+}
+.clients_text h2{
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: left;
+     
+}
+.clients_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.clients_textt h2{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;
+}
+.clients_img{
+    position: relative;
+    padding-top: 48px;
+    z-index: -1;
+}
+.clients_img img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   
+}
+.clients_img h5{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    padding-left: 60px;
+} 
+.clients_img p{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    padding-left: 60px;
+}
+/* clients part end */
+/* frequently part start */
+#frequently{
+    padding-top: 130px;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: transparent;
+    box-shadow: transparent;
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+.frequently_tab ol li{
+    z-index: -1;
+}
+.frequently_text h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+}
+.frequently_text a{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+     
+}
+
+.accordionn h2{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+/* frequently part end */
+/* Building part start */
+#building{
+    padding-top: 128px;
+}
+.building_img{
+    position: relative; 
+    z-index: -1; 
+}
+.building_input{
+    padding: 90px 96px 0 96px;
+    background-color: rgba(28, 30, 83, 1);
+}
+.img_text_main{
+    background: rgba(28, 30, 83, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.building_img_text{
+    padding: 96px 96px 268px 96px;
+}
+.building_img_text h3{
+    /* padding: 96px 96px 0px 96px; */
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 74px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 1);
+}
+.building_img_text p{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em; 
+    color: rgba(255, 255, 255, 1);
+}
+.building_text h3{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;   
+    color: rgba(255, 255, 255, 1); 
+}
+.building_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;  
+    color: rgba(255, 255, 255, 1);
+}
+.building_inner{
+    padding-top: 39px;
+}
+.building_inner h4{
+    padding: 15px 20px;
+    background-color: rgba(252, 217, 128, 1);
+    font-family:poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+.building_inner a {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    padding: 28px 0 105px 0;
+    color: rgba(255, 255, 255, 1);
+}
+.building_inner h4:hover{
+    background-color: rgba(27, 28, 43, 1);
+    color: #E3E3E3;
+}
+/* Building part end */
+/* Blog part start */
+.blog_text{
+    padding: 128px 0 64px 0;
+}
+.blog_text h3{
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;  
+}
+.blog_text_box h5{
+    padding: 40px 0 16px 0;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.blog_text_box h4{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+.blog_text_box p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.blog_text_box a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-bottom: 128px;
+}
+/* Blog part end */
+/* footer part start */
+#main_footer{
+    padding-top: 100px;
+    background-color: rgba(28, 30, 83, 1);
+}
+.footer_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 1);
+    padding-top: 22px;
+}
+.footer_textt h3{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 1);
+}
+.footer_textt p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+.icon{
+    color: rgba(255, 255, 255, 1);;
+}
+.icon .fa-twitter{
+    padding: 0 16px;
+}.icon .fa-linkedin{
+    padding: 0 16px;
+}
+.buton{
+    margin-top: 86px;
+    display: flex;
+}
+.but{
+    background-color: rgba(252, 217, 128, 1);
+    padding: 10px 40px;
+}
+.last_footer ul{
+    display: flex;
+}
+.last_footer ul li{
+    padding-top: 30px;
+}
+.last_footer ul li a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding: 0 15px;
+}
+.last_footer ul li h5{
+    padding-right: 350px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+/* footer part end */

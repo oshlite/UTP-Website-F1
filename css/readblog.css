@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+/* case study part start */
+.case_study_text{
+    padding-top: 220px;
+}
+.case_study_text h3{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+}
+.case_study_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-bottom: 32px;
+}
+/* case study part end */
+/* lorem part start */
+.lorem_text h3{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 20px 0;
+
+}
+.lorem_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left; 
+}
+.lorem_text ol li{
+    padding: 10px 10px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+/* lorem part end */
+
+/* responsive part start */
+@media (max-width:575px){
+    .case_study_text h3 {
+        font-size: 30px;
+    }
+    .offset-2 {
+        margin-left: 0%;
+    }
+    .lorem_text h3 {
+        font-size: 21px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    .case_study_text h3 {
+        font-size: 30px;
+    }
+    .offset-2 {
+        margin-left: 0%;
+    }
+    .lorem_text h3 {
+        font-size: 21px;
+    }
+    .lorem_text ol, ul {
+        padding-left: 34px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .case_study_text h3 {
+        font-size: 36px;
+    }
+    .offset-2 {
+        margin-left: 0%;
+    }
+    .lorem_text h3 {
+        font-size: 21px;
+    }
+    .lorem_text ol, ul {
+        padding-left: 34px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    .case_study_text h3 {
+        font-size: 38px;
+    }
+    .lorem_text h3 {
+        font-size: 26px;
+    }
+}
+/* responsive part end */

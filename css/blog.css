@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+/* case study part start */
+.case_study_text{
+    padding-top: 220px;
+}
+.case_study_text h3{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+}
+.case_study_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-bottom: 32px;
+}
+.case_study_img_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-top: 48px; 
+}
+.case_study_img_text a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+/* case study part end */
+/* Blog part start */
+#blogg{
+    margin-top: 100px;
+}
+.blog_text{
+    padding: 0px 0 64px 0;
+}
+.blog_text h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em; 
+}
+.blog_text_box h5{
+    padding: 40px 0 16px 0;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.blog_text_box h4{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+.blog_text_box p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.blog_text_box a{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-bottom: 128px;
+}
+/* Blog part end */
+
+
+/* Responsive part start */
+@media (max-width:575px){
+    .case_study_text h3 {
+        font-size: 36px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    .blog_text h3 {
+        font-size: 35px;
+    }
+    .case_study_text h3{
+        font-size: 40px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    .blog_text h3 {
+        font-size: 31px;
+    }
+    .case_study_text h3 {
+        font-size: 47px;
+    }
+}
+/* Responsive part end */

@@ -1,0 +1,528 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+/* Problem solve part start */
+#solve{
+    padding-top: 120px;
+}
+.solve_problem_text a{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em; 
+}
+.solve_problem_text h2{
+    font-family: Poppins;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 74px;
+    letter-spacing: 0em;
+}
+.solve_problem_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-top: 31px;
+}
+/* Problem solve part end */
+/* Goal focussed part start */
+    #goal{
+        margin-top: 100px;
+    }
+ 
+    .goal_focussed_text h5{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    }
+    .goal_focussed_text h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    }
+    .goal_focussed_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    }
+    .goal_focussed_textt {
+        padding-top: 37px;
+        
+    }
+    .goal_focussed_textt h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    }
+    .goal_focussed_textt p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    }
+    .goal_focussed_img{
+        padding-top: 80px;
+    }
+/* Goal focussed part end */
+/* process part start */
+    .process_text{
+        padding-top: 100px;
+    }
+    .process_text h2{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    }
+
+   .process_icon{
+    position: relative;
+    padding-bottom: 24px;
+   }
+   .process_iconn{
+    position: absolute;
+    top: 0;
+    left: 0;
+   }
+   .process_iconn img{
+    padding-left: 40px;
+   }
+   .process_box {
+    padding-top: 60px;
+   }
+    .process_box h6{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    }
+    .process_box p{
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;    
+    }
+/* process part end */
+/* Inspire text start */
+    #inspire{
+        margin-top: 100px;
+        background-color: rgba(238, 244, 250, 1);
+        padding-top: 100px;
+    }
+    .inspire_text h5{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    }
+    .inspire_text h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    }
+    .inspire_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    }
+    .inspire_textt{
+        padding: 90px 0;
+    }
+    .inspire_textt h5{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-top: 53px;
+    }
+    .inspire_textt h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    }
+    .inspire_textt p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    }
+/* Inspire text end */
+/* The benefits part start */
+    .benifits_text{
+        margin-top: 120px;
+    }
+    .benifits_text h2{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: center;
+    }
+    .benifits_inner{
+        margin-top: 48px;
+        padding: 52px 32px 48px 48px;
+        background-color: rgba(244, 246, 252, 1);
+    }
+    .benifits_inner h4{
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0em;
+        padding: 26px 0 12px 0;
+    }
+    .benifits_inner p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    }
+/* The benefits part end */
+/* logo part start */
+    #main_logo{
+        margin: 50px 0 80px 0;
+    }
+    .logo img{
+        padding: 0 32px;
+    }
+    .logo_text h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    }
+    .logo_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    }
+
+    .logo{
+        padding-top: 20px;
+    }
+/* logo part end */
+/* Meet our team part start */
+    #meet{
+        background-color: rgba(244, 246, 252, 1);
+        padding-bottom: 128px;
+    }
+    .meet_text h2{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    padding: 128px 0 48px 0;
+    }
+    .our_team{
+        background-color: rgba(255, 255, 255, 1);
+        padding: 48px 64px 0px 64px;
+    }
+    .our_team h6{
+    padding-top: 28px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    }
+    .our_team p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0em;
+    padding-bottom: 20px;
+    }
+   
+/* Meet our team part end */
+
+
+
+/* Responsive part start */
+@media (max-width:575px) {
+    .solve_problem_img img{
+        width: 100%;
+    }
+    .goal_focussed_img img{
+        width: 100%;
+    }
+    .process_text h2 {
+        font-size: 40px;
+    }
+    .process_iconn img {
+        padding-left: 0px;
+    }
+    .inspire_textt {
+        padding: 20px 0;
+    }
+    .inspire_textt img{
+        width: 100%;
+    }
+    .inspire_texttt img{
+        width: 100%;
+    }
+    .inspire_textt h5 {
+        padding-top: 0px;
+    }
+    .benifits_text h2 {
+        font-size: 30px;
+    }
+    .logo_text h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .logo_text p {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .logo img {
+        padding: 0px 0px;
+        width: 19%;
+    }
+    .logo {
+        padding-top: 12px;
+    }
+    .our_team img{
+        width: 100%;
+    }
+    .our_team h6 {
+        padding-top: 20px;
+        font-size: 13px;
+    }
+    .our_team p {
+        font-size: 11px;
+        line-height: 0px;
+        padding-bottom: 20px;
+    }
+    .meet_text h2 {
+        font-size: 30px;
+        padding: 110px 0 30px 0;
+    }
+ 
+}
+@media (min-width:576px) and (max-width:767px){
+    .goal_focussed_textt {
+        padding-top: 21px;
+    }
+    .goal_focussed_img {
+        padding-top: 20px;
+    }
+    .goal_focussed_img img{
+        width: 100%;
+    }
+    .process_iconn img {
+        padding-left: 0px;
+    }
+    .inspire_textt h5 {
+        padding-top: 0px;
+    }
+    .inspire_textt {
+        padding: 8px 0;
+    }
+    .process_text h2 {
+        font-size: 43px;
+    }
+    .benifits_text h2 {
+        font-size: 33px;
+    }
+    .benifits_inner {
+        padding: 31px 0px 20px 19px;
+    }
+    .benifits_inner h4 {
+        font-size: 20px;
+        padding: 20px 0 10px 0;
+    }
+    .benifits_inner p {
+        font-size: 14px;
+    }
+    .logo_text h3 {
+        font-size: 14px;
+        line-height: 15px;
+
+    }
+    .logo_text p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .logo img {
+        padding: 0px 0px;
+        width: 19%;
+    }
+    .logo {
+        padding-top: 0;
+    }
+    .our_team {
+        padding: 43px 64px 0px 64px;
+    }
+    .our_team img{
+        width: 100%;
+    }
+    .our_team h6 {
+        padding-top: 20px;
+        font-size: 13px;
+    }
+ 
+    .our_team p {
+        font-size: 14px;
+        line-height: 0px;
+        padding-bottom: 20px;
+    }
+    .meet_text h2 {
+        font-size: 30px;
+        padding: 110px 0 30px 0;
+    }
+    .our_team h6 {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    
+}
+@media (min-width:768px) and (max-width:991px){
+    .goal_focussed_img img{
+        width: 100%;
+    }
+    .inspire_textt {
+        padding: 20px 0;
+    }
+    .inspire_textt {
+        padding: 0px 0;
+    }
+    .benifits_text h2 {
+        font-size: 44px;
+    }
+    .logo_text h3 {
+        font-size: 20px;
+        line-height: 12px;
+    }
+    .logo_text p {
+        font-size: 13px;
+    }
+    .logo img {
+        padding: 0px 0px;
+        width: 19%;
+    }
+    .logo {
+        padding-top: 0px;
+    }
+    .meet_text h2 {
+        font-size: 45px;
+    }
+}
+@media (min-width: 992px) and (max-width:1199px){
+    .solve_problem_text h2 {
+        font-size: 48px;
+    }
+    .solve_problem_img img{
+        width: 100%;
+    }
+    .solve_problem_text p {
+        font-size: 14px;
+        line-height: 30px;
+        padding-top: 8px;
+    }
+    .goal_focussed_textt h3 {
+        font-size: 28px;
+    }
+    .goal_focussed_text h3 {
+        font-size: 28px;
+    }
+    .goal_focussed_img img{
+        width: 100%;
+    }
+    .process_text h2 {
+        font-size: 40px;
+    }
+    .inspire_textt img {
+        width: 100%;
+    }
+    .benifits_text h2 {
+        font-size: 29px;
+    }
+    .benifits_inner {
+        padding: 40px 32px 15px 30px;
+    }
+    .benifits_inner h4 {
+        font-size: 22px;
+    }
+    .logo_text h3 {
+        font-size: 27px;
+        line-height: 50px;
+    }
+    .logo_text p {
+        font-size: 14px;
+        line-height: 0px;
+    }
+    .logo img {
+        padding: 0px 3px;
+    }
+    .meet_text h2 {
+        font-size: 39px;
+        padding: 107px 0 48px 0;
+    }
+    .our_team {
+        padding: 26px 21px 0px 25px;
+    }
+}
+@media (min-width: 1200px) and (max-width:1399px){
+    .goal_focussed_textt h3 {
+        font-size: 34px;
+    }
+    .goal_focussed_text h3 {
+        font-size: 34px;
+    }
+    .goal_focussed_img img{
+        width: 100%;
+    }
+    .logo img {
+        padding: 0px 18px;
+    }
+    .meet_text h2 {
+        font-size: 47px;
+    }
+    .our_team {
+        padding: 34px 46px 0px 45px;
+    }
+}

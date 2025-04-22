@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    vertical-align: middle;
+}
+/* Pricing plans Part start */
+#pricing{
+    padding-top: 120px;
+}
+.pricing_text h2{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+}
+.pricing_text p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.pricing_box{
+    margin: 64px 0;
+    padding: 60px 77px 60px 70px;
+    background-color: rgba(244, 246, 252, 1);
+    transition: 0.3s;
+}
+.pricing_box:hover{
+    background-color: rgba(28, 30, 83, 1);
+    color: #fff;
+}
+.pricing_box h3{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+}
+.pricing_box span{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+.pricing_box h6{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    padding-top: 20px;
+}
+.pricing_box p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-bottom: 70px;
+}
+.pricing_box h5{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    padding-bottom: 10px;
+}
+.pricing_box h5 img{
+    padding-right: 20px;
+}
+.pricing_box a{
+    color: #fff;
+    padding: 10px 70px;
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: rgba(40, 41, 56, 1);
+}
+.pricing_box a:hover{
+    background-color: rgba(252, 217, 128, 1);
+    color: rgba(27, 28, 43, 1);
+    
+}
+/* Pricing plans Part end */
+/* frequently part start */
+#frequently{
+    padding: 130px 0;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: transparent;
+    box-shadow: transparent;
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+.frequently_tab ol li{
+    z-index: -1;
+}
+.frequently_text h3{
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+}
+.frequently_text a{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+     
+}
+
+.accordionn h2{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+/* frequently part end */
+
+
+@media (min-width: 992px) and (max-width:1199px){
+    .pricing_boxx {
+        padding: 60px 0px 60px 23px;
+    }
+    .pricing_box {
+        padding: 60px 0px 60px 23px;
+    }
+}
+@media (min-width: 1200px) and (max-width:1399px){
+    .pricing_boxx a {
+        padding: 10px 48px;
+    }
+    .pricing_box a {
+        padding: 10px 48px;
+    }
+}
+
+
+
