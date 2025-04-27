@@ -13,12 +13,11 @@ img{
     vertical-align: middle;
 }
 
-/* nav part start */
 .menu_bg{
     padding: 20px 0;
     position: fixed;
     width: 100%;
-    background-color: rgba(28, 30, 83, 1);
+    background-color: rgba(255, 30, 0, 1);
     z-index: 9999;
 }
 .menu_bg ul li a{
@@ -48,12 +47,11 @@ img{
 }
 .contact a:hover{
     background-color: rgba(252, 217, 128, 1);
-    color: #1C1E53;
+    color: rgba(255, 30, 0, 1);
 }
-/* nav part end */
-/* banner part start */
+
 #banner{
-    background-color: #1C1E53;
+    background-color: rgba(255, 30, 0, 1);
     padding: 200px 0;
 }
 .banner_text h2{
@@ -90,11 +88,10 @@ img{
 }
 .banner_text a:hover{
     background-color: rgba(252, 217, 128, 1);
-    color: rgba(27, 28, 43, 1);
+    color: rgba(255, 30, 0, 1);
     
 }
-/* banner part end */
-/* work part start */
+
 #work_main{
     padding-top: 128px;
     background-color: rgba(244, 246, 252, 1);
@@ -152,8 +149,7 @@ img{
     line-height: 28px;
     letter-spacing: 0em;
 }
-/* work part end */
-/* our project part start */
+
 #our_project{
     padding-top: 128px;
 }
@@ -184,10 +180,10 @@ img{
 }
 .project_overly{
     position: absolute;
-    background: linear-gradient(90deg, rgba(28, 30, 84, 0) 0%, rgba(34, 114, 252, 0.144) 100%);
-    background: -moz-linear-gradient(90deg, rgba(28, 30, 84, 0.164) 0%, rgba(34, 114, 252, 0.055) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(238, 50%, 22%, 1) 0%, rgba(34, 114, 252, 0) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E53", endColorstr="#2472FC", GradientType=1 );
+    background: linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="rgba(255, 30, 0, 1)", endColorstr="#FF1E00", GradientType=1 );
     height: 100%;
     width: 45%;
     left: 0;
@@ -236,10 +232,10 @@ img{
 }
 .projectt_overly{
     position: absolute;
-    background: linear-gradient(90deg, rgba(28, 30, 84, 0) 0%, rgba(34, 114, 252, 0.144) 100%);
-    background: -moz-linear-gradient(90deg, rgba(28, 30, 84, 0.164) 0%, rgba(34, 114, 252, 0.055) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(238, 50%, 22%, 1) 0%, rgba(34, 114, 252, 0) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E53", endColorstr="#2472FC", GradientType=1 );
+    background: linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="rgba(255, 30, 0, 1)", endColorstr="#FF1E00", GradientType=1 );
     height: 100%;
     width: 100%;
     left: 0;
@@ -279,10 +275,10 @@ img{
 }
 .projecttt_overly{
     position: absolute;
-    background: linear-gradient(90deg, rgba(28, 30, 84, 0) 0%, rgba(34, 114, 252, 0.144) 100%);
-    background: -moz-linear-gradient(90deg, rgba(28, 30, 84, 0.164) 0%, rgba(34, 114, 252, 0.055) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(238, 50%, 22%, 1) 0%, rgba(34, 114, 252, 0) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1C1E53", endColorstr="#2472FC", GradientType=1 );
+    background: linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 30, 0, 1) 0%, rgba(255, 30, 0, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="rgba(255, 30, 0, 1)", endColorstr="#FF1E00", GradientType=1 );
     height: 100%;
     width: 100%;
     left: 0;
@@ -320,8 +316,7 @@ img{
 .fa-arrow-right{
     padding-left: 5px;
 }
-/* our project part end */
-/* design solves part start */
+ 
 #design{
     padding-top: 128px;
     background-color: rgba(244, 246, 252, 1);
@@ -366,8 +361,7 @@ img{
     letter-spacing: 0em;
     padding: 12px 0 40px 30px;
 }
-/* design solves part end */
-/* clients part start */
+
 .clients_text{
     padding-top: 130px;
 }
@@ -422,8 +416,7 @@ img{
     letter-spacing: 0em;
     padding-left: 60px;
 }
-/* clients part end */
-/* frequently part start */
+
 #frequently{
     padding-top: 130px;
 }
@@ -469,8 +462,7 @@ img{
     line-height: 36px;
     letter-spacing: 0em;
 }
-/* frequently part end */
-/* Building part start */
+
 #building{
     padding-top: 128px;
 }
@@ -480,10 +472,10 @@ img{
 }
 .building_input{
     padding: 90px 96px 0 96px;
-    background-color: rgba(28, 30, 83, 1);
+    background-color: rgba(255, 30, 0, 1);
 }
 .img_text_main{
-    background: rgba(28, 30, 83, 0.5);
+    background: rgba(255, 30, 0, 1);
     position: absolute;
     left: 0;
     top: 0;
@@ -548,7 +540,7 @@ img{
     color: rgba(255, 255, 255, 1);
 }
 .building_inner h4:hover{
-    background-color: rgba(27, 28, 43, 1);
+    background-color: rgba(255, 30, 0, 1);
     color: #E3E3E3;
 }
 /* Building part end */
@@ -598,7 +590,7 @@ img{
 /* footer part start */
 #main_footer{
     padding-top: 100px;
-    background-color: rgba(28, 30, 83, 1);
+    background-color: rgba(255, 30, 0, 1);
 }
 .footer_text p{
     font-family: Poppins;
@@ -664,4 +656,3 @@ img{
     line-height: 28px;
     letter-spacing: 0em;
 }
-/* footer part end */

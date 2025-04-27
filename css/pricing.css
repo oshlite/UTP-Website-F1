@@ -37,7 +37,7 @@ img{
     transition: 0.3s;
 }
 .pricing_box:hover{
-    background-color: rgba(28, 30, 83, 1);
+    background-color: rgba(255, 30, 0, 1);
     color: #fff;
 }
 .pricing_box h3{
@@ -91,15 +91,14 @@ img{
     letter-spacing: 0em;
     border-radius: 25px;
     margin-top: 20px;
-    background-color: rgba(40, 41, 56, 1);
+    background-color: rgba(255, 30, 0, 1);
 }
 .pricing_box a:hover{
     background-color: rgba(252, 217, 128, 1);
-    color: rgba(27, 28, 43, 1);
+    color: rgba(255, 30, 0, 1);
     
 }
-/* Pricing plans Part end */
-/* frequently part start */
+ 
 #frequently{
     padding: 130px 0;
 }

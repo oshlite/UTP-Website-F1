@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 by Oryza</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#E10600',secondary:'#15151E'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(21, 21, 30, 0.7), rgba(21, 21, 30, 0.7)), url('https://readdy.ai/api/search-image?query=Formula%25201%2520racing%2520cars%2520on%2520track%2520with%2520dramatic%2520lighting%252C%2520motion%2520blur%252C%2520high%2520speed%2520action%252C%2520professional%2520sports%2520photography%252C%2520cinematic%2520atmosphere%252C%2520dynamic%2520composition%252C%2520vibrant%2520colors%252C%2520high%2520contrast%252C%2520shallow%2520depth%2520of%2520field&width=1920&height=1080&seq=f1hero&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #E10600;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #E10600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <span class="text-3xl font-['Pacifico'] text-primary">F1</span>
+                <span class="ml-2 font-bold text-secondary text-xl">RACING</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link active text-secondary hover:text-primary font-medium transition-colors">Home</a>
+                <a href="about.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">About</a>
+                <a href="blog.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Blog</a>
+                <a href="team.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Teams</a>
+                <a href="car.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Cars</a>
+                <a href="driver.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Drivers</a>
+                <a href="meme.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Memes</a>
+                <a href="quotes.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Quotes</a>
+            </nav>
+            
+            <!-- Mobile Navigation Toggle -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-secondary">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Home</a>
+                <a href="about.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">About</a>
+                <a href="blog.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Blog</a>
+                <a href="team.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Teams</a>
+                <a href="car.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Cars</a>
+                <a href="driver.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Drivers</a>
+                <a href="meme.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Memes</a>
+                <a href="quotes.html" class="text-secondary hover:text-primary font-medium py-2">Quotes</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Experience the Thrill of <span class="text-primary">Formula 1</span></h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">The pinnacle of motorsport, where speed, technology, and human skill combine to create the ultimate racing spectacle.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="driver.html" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all shadow-lg whitespace-nowrap">Meet the Drivers</a>
+                <a href="team.html" class="bg-white text-secondary px-8 py-3 rounded-button font-medium hover:bg-gray-100 transition-all shadow-lg whitespace-nowrap">Explore Teams</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Discover Formula 1</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Dive into the world of Formula 1 with our comprehensive coverage of teams, drivers, cars, and the latest news.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="team.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520team%2520garage%2520with%2520mechanics%2520working%2520on%2520cars%252C%2520team%2520members%2520in%2520branded%2520uniforms%252C%2520professional%2520environment%252C%2520high-tech%2520equipment%252C%2520clean%2520and%2520organized%2520space%252C%2520team%2520logos%2520visible%252C%2520bright%2520lighting&width=600&height=400&seq=f1team&orientation=landscape" alt="F1 Teams" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Teams</h3>
+                        <p class="text-gray-600 mb-4">Explore the iconic teams competing for the Constructors' Championship.</p>
+                        <div class="flex items-center text-primary font-medium">
+                            <span>Learn more</span>
+                            <div class="w-5 h-5 ml-2 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="driver.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520driver%2520in%2520racing%2520suit%2520and%2520helmet%252C%2520professional%2520portrait%252C%2520determined%2520expression%252C%2520team%2520colors%252C%2520dramatic%2520lighting%252C%2520studio%2520photography%252C%2520clean%2520background%252C%2520high%2520contrast%252C%2520professional%2520sports%2520photography&width=600&height=400&seq=f1driver&orientation=landscape" alt="F1 Drivers" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Drivers</h3>
+                        <p class="text-gray-600 mb-4">Meet the elite drivers battling for the World Championship title.</p>
+                        <div class="flex items-center text-primary font-medium">
+                            <span>Learn more</span>
+                            <div class="w-5 h-5 ml-2 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="car.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520car%2520close-up%2520detail%2520shot%252C%2520aerodynamic%2520features%252C%2520carbon%2520fiber%2520texture%252C%2520team%2520livery%2520colors%252C%2520technical%2520precision%252C%2520studio%2520lighting%252C%2520clean%2520background%252C%2520high-resolution%2520product%2520photography&width=600&height=400&seq=f1car&orientation=landscape" alt="F1 Cars" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Cars</h3>
+                        <p class="text-gray-600 mb-4">Discover the engineering marvels that define Formula 1 racing.</p>
+                        <div class="flex items-center text-primary font-medium">
+                            <span>Learn more</span>
+                            <div class="w-5 h-5 ml-2 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="blog.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520journalist%2520interviewing%2520driver%2520in%2520paddock%252C%2520media%2520coverage%252C%2520press%2520conference%2520setting%252C%2520professional%2520environment%252C%2520team%2520branding%2520visible%252C%2520natural%2520lighting%252C%2520candid%2520moment%252C%2520documentary%2520style%2520photography&width=600&height=400&seq=f1blog&orientation=landscape" alt="F1 Blog" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Latest News</h3>
+                        <p class="text-gray-600 mb-4">Stay updated with race results, team changes, and F1 insights.</p>
+                        <div class="flex items-center text-primary font-medium">
+                            <span>Learn more</span>
+                            <div class="w-5 h-5 ml-2 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Race Calendar Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">2025 Race Calendar</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Follow the Formula 1 championship around the world with our complete race schedule.</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-md">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th class="py-4 px-6 text-left">Round</th>
+                            <th class="py-4 px-6 text-left">Grand Prix</th>
+                            <th class="py-4 px-6 text-left">Circuit</th>
+                            <th class="py-4 px-6 text-left">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6">1</td>
+                            <td class="py-4 px-6">Bahrain Grand Prix</td>
+                            <td class="py-4 px-6">Bahrain International Circuit</td>
+                            <td class="py-4 px-6">March 2, 2025</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6">2</td>
+                            <td class="py-4 px-6">Saudi Arabian Grand Prix</td>
+                            <td class="py-4 px-6">Jeddah Corniche Circuit</td>
+                            <td class="py-4 px-6">March 9, 2025</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6">3</td>
+                            <td class="py-4 px-6">Australian Grand Prix</td>
+                            <td class="py-4 px-6">Albert Park Circuit</td>
+                            <td class="py-4 px-6">March 23, 2025</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6">4</td>
+                            <td class="py-4 px-6">Japanese Grand Prix</td>
+                            <td class="py-4 px-6">Suzuka International Racing Course</td>
+                            <td class="py-4 px-6">April 6, 2025</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6">5</td>
+                            <td class="py-4 px-6">Chinese Grand Prix</td>
+                            <td class="py-4 px-6">Shanghai International Circuit</td>
+                            <td class="py-4 px-6">April 13, 2025</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-6">6</td>
+                            <td class="py-4 px-6">Miami Grand Prix</td>
+                            <td class="py-4 px-6">Miami International Autodrome</td>
+                            <td class="py-4 px-6">April 27, 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-white text-primary border border-primary px-8 py-3 rounded-button font-medium hover:bg-primary hover:text-white transition-all shadow-sm whitespace-nowrap">View Full Calendar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center mb-4">
+                        <span class="text-3xl font-['Pacifico'] text-primary">F1</span>
+                        <span class="ml-2 font-bold text-secondary text-xl">RACING</span>
+                    </a>
+                    <p class="text-gray-600 mb-4">The ultimate destination for Formula 1 fans, providing comprehensive coverage of the world's most prestigious motorsport.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+                        <li><a href="about.html" class="text-gray-600 hover:text-primary">About</a></li>
+                        <li><a href="blog.html" class="text-gray-600 hover:text-primary">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="team.html" class="text-gray-600 hover:text-primary">Teams</a></li>
+                        <li><a href="driver.html" class="text-gray-600 hover:text-primary">Drivers</a></li>
+                        <li><a href="car.html" class="text-gray-600 hover:text-primary">Cars</a></li>
+                        <li><a href="meme.html" class="text-gray-600 hover:text-primary">Memes</a></li>
+                        <li><a href="quotes.html" class="text-gray-600 hover:text-primary">Quotes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">Formula 1 Headquarters, London, UK</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">info@f1racing.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">+44 123 456 7890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 text-sm mb-4 md:mb-0">© 2025 F1 Racing. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-primary text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-primary text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-600 hover:text-primary text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-2x"></i>';
+                } else {
+                    mobileMenuButton.innerHTML = '<i class="ri-close-line ri-2x"></i>';
+                }
+            });
+            
+            // Navbar scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-md');
+                    header.classList.remove('bg-opacity-95');
+                    header.classList.add('bg-opacity-100');
+                } else {
+                    header.classList.remove('shadow-md');
+                    header.classList.remove('bg-opacity-100');
+                    header.classList.add('bg-opacity-95');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

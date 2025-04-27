@@ -1,202 +1,422 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="img/F_logo.png">
-
-  </head>
-  <body>
-
-    <nav class="navbar navbar-expand-lg menu_bg">
-        <div class="container">
-          <a class="navbar-brand" href="#"><img src="img/nav logo.png" alt="nav logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-itemm">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-itemm">
-                  <a class="nav-link" href="about.html">About us</a>
-                </li>
-                <li class="nav-itemm">
-                  <a class="nav-link" href="features.html">Features</a>
-                </li>
-                <li class="nav-itemm">
-                  <a class="nav-link" href="pricing.html">Pricing</a>
-                </li>
-                <li class="nav-itemm">
-                    <a class="nav-link" href="work.html">Work</a>
-                </li>
-                <li class="nav-itemm">
-                  <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <div class="contact">
-                  <a href="contact.html">Contact Us</a>
-                </div>
-              </ul>
-
-          </div>
-        </div>
-      </nav>
-
-<section>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div class="case_study_text text-center">
-                    <h3>A UX Case Study on Creating a Studious Environment for Students</h3>
-                    <p>Andrew Jonson Posted on 27th January 2021</p>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="case_study_img">
-                    <img src="image/blog_page.png" class="w-100" alt="blog_page">
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="case_study_img_text text-center">
-                    <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
-                    <a href="readblog.html">Read More</a>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 - Blog</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#E10600',secondary:'#15151E'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #E10600;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #E10600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <span class="text-3xl font-['Pacifico'] text-primary">F1</span>
+                <span class="ml-2 font-bold text-secondary text-xl">RACING</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Home</a>
+                <a href="about.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">About</a>
+                <a href="blog.html" class="nav-link active text-secondary hover:text-primary font-medium transition-colors">Blog</a>
+                <a href="team.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Teams</a>
+                <a href="car.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Cars</a>
+                <a href="driver.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Drivers</a>
+                <a href="meme.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Memes</a>
+                <a href="quotes.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Quotes</a>
+            </nav>
+            
+            <!-- Mobile Navigation Toggle -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-secondary">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
             </div>
         </div>
-    </div>
-</section>
-
-<section id="blogg">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-4 col-lg-2">
-                <div class="blog_text text-center">
-                    <h3>Our blog</h3>
-                </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Home</a>
+                <a href="about.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">About</a>
+                <a href="blog.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Blog</a>
+                <a href="team.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Teams</a>
+                <a href="car.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Cars</a>
+                <a href="driver.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Drivers</a>
+                <a href="meme.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Memes</a>
+                <a href="quotes.html" class="text-secondary hover:text-primary font-medium py-2">Quotes</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog_text_box">
-                    <img src="image/blog_part.png" class="w-100" alt="blog_part">
-                    <h5>9 Jan 2022</h5>
-                    <h4>How one Webflow user grew his single person consultancy from $0-100K in 14 months</h4>
-                    <p>See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract</p>
-                    <a href="#">Read More<img src="img/Arrow 1.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog_text_box">
-                    <img src="image/blog_part3.png" class="w-100" alt="blog_part3">
-                    <h5>9 Jan 2022</h5>
-                    <h4>How one Webflow user grew his single person consultancy from $0-100K in 14 months</h4>
-                    <p>See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract</p>
-                    <a href="#">Read More <img src="img/Arrow 1.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog_text_box">
-                    <img src="image/blog_part4.png" class="w-100" alt="blog_part4">
-                    <h5>9 Jan 2022</h5>
-                    <h4>How one Webflow user grew his single person consultancy from $0-100K in 14 months</h4>
-                    <p>See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract</p>
-                    <a href="#">Read More <img src="img/Arrow 1.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog_text_box">
-                    <img src="image/blog_part5.png" class="w-100" alt="blog_part5">
-                    <h5>9 Jan 2022</h5>
-                    <h4>How one Webflow user grew his single person consultancy from $0-100K in 14 months</h4>
-                    <p>See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract</p>
-                    <a href="#">Read More<img src="img/Arrow 1.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog_text_box">
-                    <img src="image/blog_part6.png" class="w-100" alt="blog_part6">
-                    <h5>9 Jan 2022</h5>
-                    <h4>How one Webflow user grew his single person consultancy from $0-100K in 14 months</h4>
-                    <p>See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract</p>
-                    <a href="#">Read More <img src="img/Arrow 1.png" alt=""></a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="blog_text_box">
-                    <img src="image/blog_part3.png" class="w-100" alt="blog_part3">
-                    <h5>9 Jan 2022</h5>
-                    <h4>How one Webflow user grew his single person consultancy from $0-100K in 14 months</h4>
-                    <p>See how pivoting to Webflow changed one person’s sales strategy and allowed him to attract</p>
-                    <a href="#">Read More <img src="img/Arrow 1.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </header>
 
-<section id="main_footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="footer_text">
-                    <img src="img/nav logo.png" alt="nav logo">
-                    <p>We are always open to discuss your project and improve your online presence.</p>
-                </div>
-                <div class="buton">
-                    <div class="but">
-                        <h5>Email me at</h5>
-                        <h6>contact@website.com</h6>
+    <!-- Blog Header -->
+    <section class="pt-32 pb-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">F1 Racing Blog</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with the latest news, analysis, and insights from the world of Formula 1 racing.</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="flex flex-col md:flex-row gap-4 mb-12">
+                <div class="relative flex-grow">
+                    <input type="text" placeholder="Search articles..." class="w-full px-4 py-3 pl-12 rounded-button border border-gray-200 focus:border-primary">
+                    <div class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
                     </div>
-                    <div class="but">
-                        <h5>Call us</h5>
-                        <h6>0927 6277 28525</h6>
-                    </div>
-                 </div>
-            </div>
-            <div class="col-lg-4 offset-1">
-                <div class="footer_textt">
-                    <h3>Lets Talk!</h3>
-                    <p>We are always open to discuss your project, improve your online presence and help with your UX/UI design challenges.</p>
-                    <div class="icon"><i class="fa-brands fa-facebook-f"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-linkedin"></i></div>
+                </div>
+                <div class="flex gap-4">
+                    <select class="px-4 py-3 pr-10 rounded-button border border-gray-200 focus:border-primary cursor-pointer">
+                        <option value="">All Categories</option>
+                        <option value="race-reports">Race Reports</option>
+                        <option value="technical">Technical Analysis</option>
+                        <option value="interviews">Interviews</option>
+                        <option value="features">Features</option>
+                    </select>
+                    <select class="px-4 py-3 pr-10 rounded-button border border-gray-200 focus:border-primary cursor-pointer">
+                        <option value="">Sort By</option>
+                        <option value="latest">Latest</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                    </select>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <!-- Featured Article -->
+            <div class="mb-16">
+                <a href="article.html" class="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="h-64 md:h-auto overflow-hidden">
+                            <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520race%2520action%2520with%2520multiple%2520cars%2520battling%2520for%2520position%252C%2520dramatic%2520lighting%252C%2520motion%2520blur%252C%2520professional%2520sports%2520photography%252C%2520high%2520contrast%252C%2520cinematic%2520atmosphere%252C%2520track%2520visible%252C%2520crowd%2520in%2520background&width=800&height=600&seq=f1featured&orientation=landscape" alt="Featured Article" class="w-full h-full object-cover object-top">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary bg-opacity-10 text-primary text-sm font-medium px-4 py-1 rounded-full">Featured</span>
+                                <span class="text-gray-500 text-sm ml-4">April 27, 2025</span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-secondary mb-4">The Evolution of F1 Aerodynamics: A Deep Dive into Modern Racing Technology</h2>
+                            <p class="text-gray-600 mb-6">Explore how Formula 1 aerodynamics have evolved over the decades and how teams are pushing the boundaries of physics to gain competitive advantages on track.</p>
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520male%2520journalist%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author1&orientation=squarish" alt="Author" class="w-10 h-10 rounded-full object-cover">
+                                <div class="ml-3">
+                                    <p class="text-secondary font-medium">Michael Anderson</p>
+                                    <p class="text-gray-500 text-sm">Technical Editor</p>
+                                </div>
+                                <div class="ml-auto flex items-center text-gray-500">
+                                    <div class="w-5 h-5 flex items-center justify-center">
+                                        <i class="ri-time-line"></i>
+                                    </div>
+                                    <span class="ml-1">12 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="last_footer"> 
-                    <ul>
-                        <li><h5>Copyright 2022, Formula 1.com</h5></li>
-                        <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="features.html">Features</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="case.html">Read Case</a></li>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
+            <!-- Latest Articles Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <a href="article.html" class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520driver%2520celebrating%2520on%2520podium%252C%2520champagne%2520spray%252C%2520victory%2520celebration%252C%2520crowd%2520cheering%252C%2520professional%2520sports%2520photography%252C%2520dramatic%2520lighting%252C%2520emotional%2520moment&width=600&height=400&seq=f1blog1&orientation=landscape" alt="Article 1" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs font-medium px-3 py-1 rounded-full">Race Report</span>
+                            <span class="text-gray-500 text-sm ml-auto">April 27, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Miami GP: Verstappen's Masterclass in Wet Conditions</h3>
+                        <p class="text-gray-600 mb-4">A detailed analysis of how Max Verstappen dominated the challenging wet conditions at the Miami International Autodrome.</p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520female%2520journalist%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author2&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-gray-600 text-sm">Sarah Thompson</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="article.html" class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520car%2520technical%2520details%252C%2520close-up%2520of%2520aerodynamic%2520components%252C%2520engineering%2520focus%252C%2520carbon%2520fiber%2520textures%252C%2520studio%2520lighting%252C%2520professional%2520product%2520photography&width=600&height=400&seq=f1blog2&orientation=landscape" alt="Article 2" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs font-medium px-3 py-1 rounded-full">Technical</span>
+                            <span class="text-gray-500 text-sm ml-auto">April 26, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Ferrari's Revolutionary Floor Design Explained</h3>
+                        <p class="text-gray-600 mb-4">Technical analysis of Ferrari's new floor design that's causing a stir in the paddock and its potential impact on performance.</p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520male%2520technical%2520expert%252C%2520glasses%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author3&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-gray-600 text-sm">David Chen</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="article.html" class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520team%2520principal%2520interview%252C%2520paddock%2520setting%252C%2520professional%2520environment%252C%2520media%2520presence%252C%2520team%2520branding%2520visible%252C%2520natural%2520lighting%252C%2520candid%2520moment&width=600&height=400&seq=f1blog3&orientation=landscape" alt="Article 3" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs font-medium px-3 py-1 rounded-full">Interview</span>
+                            <span class="text-gray-500 text-sm ml-auto">April 25, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Exclusive: Toto Wolff on Mercedes' Future Strategy</h3>
+                        <p class="text-gray-600 mb-4">Mercedes team principal discusses the team's development direction and plans for the upcoming regulation changes.</p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520female%2520sports%2520journalist%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author4&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-gray-600 text-sm">Emma Roberts</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 4 -->
+                <a href="article.html" class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520pit%2520stop%2520action%252C%2520team%2520mechanics%2520working%252C%2520high%2520speed%2520photography%252C%2520dramatic%2520lighting%252C%2520professional%2520sports%2520photography%252C%2520team%2520coordination%252C%2520garage%2520environment&width=600&height=400&seq=f1blog4&orientation=landscape" alt="Article 4" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs font-medium px-3 py-1 rounded-full">Analysis</span>
+                            <span class="text-gray-500 text-sm ml-auto">April 24, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">The Science Behind Sub-2 Second Pit Stops</h3>
+                        <p class="text-gray-600 mb-4">Breaking down the technology, training, and teamwork that make modern F1 pit stops faster than ever.</p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520male%2520technical%2520analyst%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author5&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-gray-600 text-sm">James Wilson</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 5 -->
+                <a href="article.html" class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520driver%2520training%2520session%252C%2520simulator%2520setup%252C%2520professional%2520environment%252C%2520high-tech%2520equipment%252C%2520focused%2520expression%252C%2520team%2520facility%252C%2520modern%2520technology&width=600&height=400&seq=f1blog5&orientation=landscape" alt="Article 5" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs font-medium px-3 py-1 rounded-full">Feature</span>
+                            <span class="text-gray-500 text-sm ml-auto">April 23, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Inside an F1 Driver's Training Regime</h3>
+                        <p class="text-gray-600 mb-4">A day in the life of modern F1 drivers: from simulator work to physical conditioning and mental preparation.</p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520female%2520sports%2520writer%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author6&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-gray-600 text-sm">Laura Martinez</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Article 6 -->
+                <a href="article.html" class="blog-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Formula%25201%2520sustainability%2520initiatives%252C%2520electric%2520charging%2520stations%252C%2520solar%2520panels%252C%2520green%2520technology%252C%2520professional%2520photography%252C%2520clean%2520energy%252C%2520environmental%2520focus&width=600&height=400&seq=f1blog6&orientation=landscape" alt="Article 6" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-primary bg-opacity-10 text-primary text-xs font-medium px-3 py-1 rounded-full">Special Report</span>
+                            <span class="text-gray-500 text-sm ml-auto">April 22, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">F1's Green Revolution: The Road to Carbon Neutrality</h3>
+                        <p class="text-gray-600 mb-4">How Formula 1 is leading the charge in sustainable motorsport and developing green technologies.</p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520male%2520environmental%2520journalist%252C%2520confident%2520expression%252C%2520business%2520casual%2520attire%252C%2520studio%2520lighting%252C%2520neutral%2520background&width=100&height=100&seq=author7&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-gray-600 text-sm">Alex Green</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-primary hover:text-primary transition-colors">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-primary hover:text-primary transition-colors">2</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-primary hover:text-primary transition-colors">3</a>
+                    <span class="w-10 h-10 flex items-center justify-center text-gray-500">...</span>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-primary hover:text-primary transition-colors">10</a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-primary hover:text-primary transition-colors">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Never Miss a Story</h2>
+                <p class="text-gray-300 mb-8">Subscribe to our newsletter for the latest F1 news, analysis, and exclusive content delivered straight to your inbox.</p>
+                
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-button text-secondary border-none focus:ring-2 focus:ring-primary">
+                    <button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Subscribe</button>
+                </form>
+                
+                <p class="text-gray-400 text-sm mt-4">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center mb-4">
+                        <span class="text-3xl font-['Pacifico'] text-primary">F1</span>
+                        <span class="ml-2 font-bold text-secondary text-xl">RACING</span>
+                    </a>
+                    <p class="text-gray-600 mb-4">The ultimate destination for Formula 1 fans, providing comprehensive coverage of the world's most prestigious motorsport.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+                        <li><a href="about.html" class="text-gray-600 hover:text-primary">About</a></li>
+                        <li><a href="blog.html" class="text-gray-600 hover:text-primary">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="team.html" class="text-gray-600 hover:text-primary">Teams</a></li>
+                        <li><a href="driver.html" class="text-gray-600 hover:text-primary">Drivers</a></li>
+                        <li><a href="car.html" class="text-gray-600 hover:text-primary">Cars</a></li>
+                        <li><a href="meme.html" class="text-gray-600 hover:text-primary">Memes</a></li>
+                        <li><a href="quotes.html" class="text-gray-600 hover:text-primary">Quotes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold text-secondary mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">Formula 1 Headquarters, London, UK</span>
+                        </li>
+                        <li class="flex items-start">
+                             
+
+                            <div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">contact@f1racing.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600">+44 20 1234 5678</span>
+                        </li>
                     </ul>
                 </div>
             </div>
+            
+            <div class="border-t border-gray-200 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-600 text-sm">© 2025 F1 Racing. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-600 hover:text-primary text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-600 hover:text-primary text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-600 hover:text-primary text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Header scroll behavior
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('shadow-lg');
+            } else {
+                header.classList.add('shadow-lg');
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
 </body>
 </html>

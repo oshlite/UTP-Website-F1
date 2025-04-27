@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalender Formula 1 2025 - F1 Race Calendar</title>
+<script src="https://cdn.tailwindcss.com/3.4.16">
+</script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { primary: "#FF1801", secondary: "#1A1A1A" },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
+      },
+    },
+  },
+};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=Formula%201%20race%20track%20at%20sunset%2C%20dramatic%20lighting%2C%20aerial%20view%2C%20professional%20sports%20photography%2C%20high%20energy%20atmosphere%2C%20dynamic%20composition%2C%20high%20contrast%2C%20vibrant%20colors%2C%20cinematic%20shot&width=1920&height=800&seq=124&orientation=landscape');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+}
+.race-card {
+transition: all 0.3s ease;
+}
+.race-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.race-image {
+transition: all 0.3s ease;
+}
+.race-card:hover .race-image {
+transform: scale(1.05);
+}
+.modal {
+transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-content {
+transition: transform 0.3s ease;
+}
+.scroll-to-top {
+transition: opacity 0.3s ease, transform 0.3s ease;
+opacity: 0;
+transform: translateY(20px);
+}
+.scroll-to-top.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.track-map {
+background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');
+background-size: cover;
+background-position: center;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3">
+<div class="flex justify-between items-center">
+<a href="index.html" class="font-['Pacifico'] text-primary text-2xl">logo</a>
+<div class="hidden md:flex space-x-6 items-center">
+<a href="index.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Beranda</a>
+<a href="about.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Tentang Kami</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Blog</a>
+<a href="team.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Tim</a>
+<a href="car.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Mobil</a>
+<a href="driver.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Pembalap</a>
+<a href="calendar.html" class="text-primary font-medium">Kalender</a>
+<a href="meme.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Meme</a>
+<a href="quotes.html" class="text-gray-700 hover:text-primary transition-colors duration-300">Quotes</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden" id="mobile-menu">
+<div class="flex flex-col space-y-3 mt-4 pb-3">
+<a href="index.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Beranda</a>
+<a href="about.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Tentang Kami</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Blog</a>
+<a href="team.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Tim</a>
+<a href="car.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Mobil</a>
+<a href="driver.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Pembalap</a>
+<a href="calendar.html" class="text-primary font-medium py-2">Kalender</a>
+<a href="meme.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Meme</a>
+<a href="quotes.html" class="text-gray-700 hover:text-primary transition-colors duration-300 py-2">Quotes</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section relative h-[400px] flex items-center">
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Kalender Formula 1 2025</h1>
+<p class="text-lg text-gray-200 mb-6">Jadwal lengkap balapan Formula 1 musim 2025. Jangan lewatkan setiap momen seru di setiap sirkuit!</p>
+<button class="bg-primary hover:bg-red-700 text-white px-6 py-3 !rounded-button font-medium transition-colors duration-300 whitespace-nowrap">Lihat Jadwal</button>
+</div>
+</div>
+</section>
+<!-- Next Race Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="bg-gray-50 rounded-lg p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full mr-4">
+<i class="ri-flag-2-line ri-lg"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold">Balapan Berikutnya</h3>
+<p class="text-gray-600">27 April 2025</p>
+</div>
+</div>
+<h2 class="text-3xl font-bold mb-4">Miami Grand Prix</h2>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center text-gray-500 mr-3">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Miami International Autodrome, Miami, Florida</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center text-gray-500 mr-3">
+<i class="ri-time-line"></i>
+</div>
+<span>Pukul 14:00 WIB</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center text-gray-500 mr-3">
+<i class="ri-route-line"></i>
+</div>
+<span>57 Lap / 308.326 km</span>
+</div>
+</div>
+<div class="mt-8">
+<button class="bg-primary hover:bg-red-700 text-white px-6 py-3 !rounded-button font-medium transition-colors duration-300 whitespace-nowrap">Lihat Detail Sirkuit</button>
+</div>
+</div>
+<div class="track-map h-[300px] rounded-lg overflow-hidden"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Race Calendar Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">Jadwal Balapan 2025</h2>
+<div class="space-y-8">
+<!-- Race 1 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-1 overflow-hidden h-full">
+<img src="https://readdy.ai/api/search-image?query=Bahrain%20International%20Circuit%20aerial%20view%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=125&orientation=landscape" alt="Bahrain Grand Prix" class="w-full h-full object-cover">
+</div>
+<div class="md:col-span-2 p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-2xl font-bold text-gray-900">Bahrain Grand Prix</h3>
+<p class="text-primary font-medium mt-1">Sakhir International Circuit</p>
+</div>
+<span class="text-lg font-bold text-primary">2 Mar 2025</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Lap</p>
+<p class="text-lg font-bold text-gray-800">57</p>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Jarak</p>
+<p class="text-lg font-bold text-gray-800">308.2 km</p>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Panjang</p>
+<p class="text-lg font-bold text-gray-800">5.412 km</p>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Waktu</p>
+<p class="text-lg font-bold text-gray-800">18:00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Race 2 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-1 overflow-hidden h-full">
+<img src="https://readdy.ai/api/search-image?query=Jeddah%20Corniche%20Circuit%20aerial%20view%20at%20night%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=126&orientation=landscape" alt="Saudi Arabian Grand Prix" class="w-full h-full object-cover">
+</div>
+<div class="md:col-span-2 p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-2xl font-bold text-gray-900">Saudi Arabian Grand Prix</h3>
+<p class="text-primary font-medium mt-1">Jeddah Corniche Circuit</p>
+</div>
+<span class="text-lg font-bold text-primary">9 Mar 2025</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Lap</p>
+<p class="text-lg font-bold text-gray-800">50</p>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Jarak</p>
+<p class="text-lg font-bold text-gray-800">308.45 km</p>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Panjang</p>
+<p class="text-lg font-bold text-gray-800">6.174 km</p>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg text-center">
+<p class="text-sm text-gray-600">Waktu</p>
+<p class="text-lg font-bold text-gray-800">20:00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Continue with more races in the same format -->
+</div>
+</div>
+</section>
+<div class="overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Bahrain%20International%20Circuit%20aerial%20view%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=125&orientation=landscape" alt="Bahrain Grand Prix" class="race-image w-full h-full object-cover">
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Bahrain Grand Prix</h3>
+<span class="text-primary font-medium">2 Mar</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Sakhir, Bahrain</span>
+</div>
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-time-line"></i>
+</div>
+<span>57 Lap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Race 2 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Jeddah%20Corniche%20Circuit%20aerial%20view%20at%20night%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=126&orientation=landscape" alt="Saudi Arabian Grand Prix" class="race-image w-full h-full object-cover">
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Saudi Arabian GP</h3>
+<span class="text-primary font-medium">9 Mar</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Jeddah, Saudi Arabia</span>
+</div>
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-time-line"></i>
+</div>
+<span>50 Lap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Race 3 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Albert%20Park%20Circuit%20Melbourne%20aerial%20view%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=127&orientation=landscape" alt="Australian Grand Prix" class="race-image w-full h-full object-cover">
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Australian GP</h3>
+<span class="text-primary font-medium">23 Mar</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Melbourne, Australia</span>
+</div>
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-time-line"></i>
+</div>
+<span>58 Lap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Race 4 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Suzuka%20Circuit%20aerial%20view%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=128&orientation=landscape" alt="Japanese Grand Prix" class="race-image w-full h-full object-cover">
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Japanese GP</h3>
+<span class="text-primary font-medium">6 Apr</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Suzuka, Japan</span>
+</div>
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-time-line"></i>
+</div>
+<span>53 Lap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Race 5 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Shanghai%20International%20Circuit%20aerial%20view%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=129&orientation=landscape" alt="Chinese Grand Prix" class="race-image w-full h-full object-cover">
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Chinese GP</h3>
+<span class="text-primary font-medium">20 Apr</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Shanghai, China</span>
+</div>
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-time-line"></i>
+</div>
+<span>56 Lap</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Race 6 -->
+<div class="race-card bg-white rounded-lg overflow-hidden shadow-md">
+<div class="overflow-hidden h-48">
+<img src="https://readdy.ai/api/search-image?query=Miami%20International%20Autodrome%20aerial%20view%2C%20Formula%201%20race%20track%2C%20professional%20sports%20photography%2C%20dramatic%20lighting%2C%20high%20quality&width=600&height=400&seq=130&orientation=landscape" alt="Miami Grand Prix" class="race-image w-full h-full object-cover">
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Miami GP</h3>
+<span class="text-primary font-medium">27 Apr</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Miami, USA</span>
+</div>
+<div class="flex items-center text-gray-600">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-time-line"></i>
+</div>
+<span>57 Lap</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Race Stats Section -->
+<section class="py-8 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-gray-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-3">
+<i class="ri-flag-2-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-1">24</h3>
+<p class="text-gray-600 text-sm">Total Balapan</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-3">
+<i class="ri-earth-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-1">21</h3>
+<p class="text-gray-600 text-sm">Negara</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-3">
+<i class="ri-route-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-1">1,325</h3>
+<p class="text-gray-600 text-sm">Total Lap</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-3">
+<i class="ri-timer-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-1">7,200</h3>
+<p class="text-gray-600 text-sm">Total Kilometer</p>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-flag-2-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-2">24</h3>
+<p class="text-gray-600">Total Balapan</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-earth-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-2">21</h3>
+<p class="text-gray-600">Negara</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-route-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-2">1,325</h3>
+<p class="text-gray-600">Total Lap</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-timer-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-2">7,200</h3>
+<p class="text-gray-600">Total Kilometer</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="index.html" class="font-['Pacifico'] text-white text-2xl mb-4 block">logo</a>
+<p class="text-gray-400 mt-4">Situs web penggemar Formula 1 terbaik dengan berita terbaru, profil pembalap, dan informasi tim.</p>
+<div class="flex mt-6 space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-300">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">link</h3>
+<ul class="space-y-2">
+<li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300">Beranda</a></li>
+<li><a href="about.html" class="text-gray-400 hover:text-white transition-colors duration-300">Tentang Kami</a></li>
+<li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+<li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">Kontak</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">Formula 1</h3>
+<ul class="space-y-2">
+<li><a href="team.html" class="text-gray-400 hover:text-white transition-colors duration-300">Tim</a></li>
+<li><a href="driver.html" class="text-gray-400 hover:text-white transition-colors duration-300">Pembalap</a></li>
+<li><a href="car.html" class="text-gray-400 hover:text-white transition-colors duration-300">Mobil</a></li>
+<li><a href="calendar.html" class="text-gray-400 hover:text-white transition-colors duration-300">Kalender</a></li>
+<li><a href="meme.html" class="text-gray-400 hover:text-white transition-colors duration-300">Meme</a></li>
+<li><a href="quotes.html" class="text-gray-400 hover:text-white transition-colors duration-300">Quotes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">Kontak</h3>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">Jl. Sudirman No. 123, Jakarta, Indonesia</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@f1fansite.id</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">+62 812 3456 7890</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-500">© 2025 Formula 1 Fan Site. Hak Cipta Dilindungi.</p>
+</div>
+</div>
+</footer>
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center z-40">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Mobile Menu Toggle
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenuButton.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+  });
+  // Scroll to Top Button
+  const scrollToTopButton = document.querySelector(".scroll-to-top");
+  function toggleScrollToTopButton() {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  }
+  window.addEventListener("scroll", toggleScrollToTopButton);
+  scrollToTopButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  // Initialize
+  toggleScrollToTopButton();
+});
+</script>
+</body>
+</html>

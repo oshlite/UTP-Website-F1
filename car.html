@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formula 1 - Cars</title>
+<script src="https://cdn.tailwindcss.com/3.4.16">
+</script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { primary: "#E10600", secondary: "#15151E" },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
+      },
+    },
+  },
+};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Roboto', sans-serif;
+scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.team-card:hover {
+transform: translateY(-5px);
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #E10600;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="index.html" class="flex items-center">
+<span class="text-3xl font-['Pacifico'] text-primary">F1</span>
+<span class="ml-2 font-bold text-secondary text-xl">RACING</span>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Home</a>
+<a href="about.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">About</a>
+<a href="blog.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Blog</a>
+<a href="team.html" class="nav-link active text-secondary hover:text-primary font-medium transition-colors">Teams</a>
+<a href="car.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Cars</a>
+<a href="driver.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Drivers</a>
+<a href="meme.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Memes</a>
+<a href="quotes.html" class="nav-link text-secondary hover:text-primary font-medium transition-colors">Quotes</a>
+</nav>
+<!-- Mobile Navigation Toggle -->
+<div class="md:hidden flex items-center">
+<button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-secondary">
+<i class="ri-menu-line ri-2x"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+<a href="index.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Home</a>
+<a href="about.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">About</a>
+<a href="blog.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Blog</a>
+<a href="team.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Teams</a>
+<a href="car.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Cars</a>
+<a href="driver.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Drivers</a>
+<a href="meme.html" class="text-secondary hover:text-primary font-medium py-2 border-b border-gray-100">Memes</a>
+<a href="quotes.html" class="text-secondary hover:text-primary font-medium py-2">Quotes</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">2025 Formula 1 Cars</h1>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore the cutting-edge racing machines of the 2025 Formula 1 season. Each car represents the pinnacle of automotive engineering and aerodynamic innovation.</p>
+</div>
+</div>
+</section>
+<!-- Car Showcase Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Red Bull RB21 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative h-[400px] overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Formula%25201%2520Red%2520Bull%2520racing%2520car%25202025%2520concept%252C%2520dark%2520blue%2520livery%2520with%2520red%2520bull%2520branding%252C%2520front%25203%252F4%2520view%252C%2520studio%2520lighting%252C%2520clean%2520background%252C%2520highly%2520detailed%2520aerodynamic%2520elements%252C%2520dramatic%2520composition&width=800&height=600&seq=rb21&orientation=landscape" alt="Red Bull RB21" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white">Red Bull RB21</h3>
+<p class="text-gray-200">Red Bull Racing</p>
+</div>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-2 gap-6 mb-6">
+<div>
+<span class="text-sm text-gray-500">Engine</span>
+<p class="font-medium text-secondary">Honda RBPT</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Power Unit</span>
+<p class="font-medium text-secondary">1.6L V6 Turbo Hybrid</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Top Speed</span>
+<p class="font-medium text-secondary">370 km/h</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Weight</span>
+<p class="font-medium text-secondary">798 kg</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center">
+<i class="ri-award-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Most aerodynamically efficient design</span>
+</div>
+<div class="flex items-center">
+<i class="ri-speed-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Revolutionary sidepod concept</span>
+</div>
+<div class="flex items-center">
+<i class="ri-steering-2-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Advanced suspension system</span>
+</div>
+</div>
+<button class="mt-6 w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all">View Details</button>
+</div>
+</div>
+<!-- Ferrari SF25 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative h-[400px] overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Formula%25201%2520Ferrari%2520racing%2520car%25202025%2520concept%252C%2520iconic%2520red%2520livery%252C%2520front%25203%252F4%2520view%252C%2520studio%2520lighting%252C%2520clean%2520background%252C%2520highly%2520detailed%2520aerodynamic%2520elements%252C%2520dramatic%2520composition&width=800&height=600&seq=sf25&orientation=landscape" alt="Ferrari SF25" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white">Ferrari SF25</h3>
+<p class="text-gray-200">Scuderia Ferrari</p>
+</div>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-2 gap-6 mb-6">
+<div>
+<span class="text-sm text-gray-500">Engine</span>
+<p class="font-medium text-secondary">Ferrari 066/10</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Power Unit</span>
+<p class="font-medium text-secondary">1.6L V6 Turbo Hybrid</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Top Speed</span>
+<p class="font-medium text-secondary">365 km/h</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Weight</span>
+<p class="font-medium text-secondary">798 kg</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center">
+<i class="ri-fire-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Enhanced power unit efficiency</span>
+</div>
+<div class="flex items-center">
+<i class="ri-dashboard-3-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Innovative cooling system</span>
+</div>
+<div class="flex items-center">
+<i class="ri-settings-5-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Advanced traction control</span>
+</div>
+</div>
+<button class="mt-6 w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all">View Details</button>
+</div>
+</div>
+<!-- Mercedes W16 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative h-[400px] overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Formula%25201%2520Mercedes%2520racing%2520car%25202025%2520concept%252C%2520silver%2520arrows%2520livery%252C%2520front%25203%252F4%2520view%252C%2520studio%2520lighting%252C%2520clean%2520background%252C%2520highly%2520detailed%2520aerodynamic%2520elements%252C%2520dramatic%2520composition&width=800&height=600&seq=w16&orientation=landscape" alt="Mercedes W16" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white">Mercedes W16</h3>
+<p class="text-gray-200">Mercedes-AMG Petronas</p>
+</div>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-2 gap-6 mb-6">
+<div>
+<span class="text-sm text-gray-500">Engine</span>
+<p class="font-medium text-secondary">Mercedes M14</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Power Unit</span>
+<p class="font-medium text-secondary">1.6L V6 Turbo Hybrid</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Top Speed</span>
+<p class="font-medium text-secondary">368 km/h</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Weight</span>
+<p class="font-medium text-secondary">798 kg</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center">
+<i class="ri-battery-2-charge-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Next-gen energy recovery</span>
+</div>
+<div class="flex items-center">
+<i class="ri-wind-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Zero-pod design concept</span>
+</div>
+<div class="flex items-center">
+<i class="ri-rocket-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Push-rod suspension</span>
+</div>
+</div>
+<button class="mt-6 w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all">View Details</button>
+</div>
+</div>
+<!-- McLaren MCL39 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<div class="relative h-[400px] overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Formula%25201%2520McLaren%2520racing%2520car%25202025%2520concept%252C%2520papaya%2520orange%2520livery%252C%2520front%25203%252F4%2520view%252C%2520studio%2520lighting%252C%2520clean%2520background%252C%2520highly%2520detailed%2520aerodynamic%2520elements%252C%2520dramatic%2520composition&width=800&height=600&seq=mcl39&orientation=landscape" alt="McLaren MCL39" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white">McLaren MCL39</h3>
+<p class="text-gray-200">McLaren Racing</p>
+</div>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-2 gap-6 mb-6">
+<div>
+<span class="text-sm text-gray-500">Engine</span>
+<p class="font-medium text-secondary">Mercedes M14</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Power Unit</span>
+<p class="font-medium text-secondary">1.6L V6 Turbo Hybrid</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Top Speed</span>
+<p class="font-medium text-secondary">362 km/h</p>
+</div>
+<div>
+<span class="text-sm text-gray-500">Weight</span>
+<p class="font-medium text-secondary">798 kg</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center">
+<i class="ri-shape-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Innovative underfloor design</span>
+</div>
+<div class="flex items-center">
+<i class="ri-compasses-2-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Advanced diffuser concept</span>
+</div>
+<div class="flex items-center">
+<i class="ri-focus-3-line text-primary w-6 h-6 flex items-center justify-center"></i>
+<span class="ml-2 text-gray-700">Optimized brake cooling</span>
+</div>
+</div>
+<button class="mt-6 w-full bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Innovations Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Technical Innovations</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover the groundbreaking technologies that define the 2025 Formula 1 season.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Aerodynamics -->
+<div class="bg-white rounded-lg p-6 shadow-md">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-wind-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-3">Advanced Aerodynamics</h3>
+<p class="text-gray-600">Next-generation ground effect technology and active aero elements for improved downforce and reduced drag.</p>
+</div>
+<!-- Hybrid Power -->
+<div class="bg-white rounded-lg p-6 shadow-md">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-battery-2-charge-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-3">Hybrid Power Units</h3>
+<p class="text-gray-600">Enhanced energy recovery systems and improved thermal efficiency for maximum performance and sustainability.</p>
+</div>
+<!-- Materials -->
+<div class="bg-white rounded-lg p-6 shadow-md">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-shield-star-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-3">Advanced Materials</h3>
+<p class="text-gray-600">Cutting-edge composite materials and nano-engineered surfaces for optimal strength and weight reduction.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Performance Comparison Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Performance Comparison</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Compare the performance metrics of the 2025 Formula 1 cars across different categories.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Speed Chart -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h3 class="text-xl font-bold text-secondary mb-6">Top Speed Comparison</h3>
+<div id="speedChart" class="w-full h-80"></div>
+</div>
+<!-- Acceleration Chart -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h3 class="text-xl font-bold text-secondary mb-6">0-100 km/h Acceleration</h3>
+<div id="accelerationChart" class="w-full h-80"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Red Bull Racing -->
+<div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Red%2520Bull%2520Racing%2520Formula%25201%2520car%2520in%2520team%2520garage%252C%2520dark%2520blue%2520livery%2520with%2520red%2520bull%2520branding%252C%2520professional%2520lighting%252C%2520clean%2520environment%252C%2520high-end%2520racing%2520technology%2520visible%252C%2520team%2520mechanics%2520working%252C%2520dramatic%2520composition&width=800&height=600&seq=redbull&orientation=landscape" alt="Red Bull Racing" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white mb-1">Red Bull Racing</h3>
+<p class="text-gray-200">Milton Keynes, United Kingdom</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-sm text-gray-500">Team Principal</span>
+<p class="font-medium text-secondary">Christian Horner</p>
+</div>
+<div class="text-right">
+<span class="text-sm text-gray-500">Championships</span>
+<p class="font-medium text-secondary">6</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">1</span>
+</div>
+<span class="ml-3 text-gray-700">Max Verstappen</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">11</span>
+</div>
+<span class="ml-3 text-gray-700">Sergio Pérez</span>
+</div>
+</div>
+<a href="#" class="mt-6 block text-center bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Team Details</a>
+</div>
+</div>
+<!-- Ferrari -->
+<div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Ferrari%2520Formula%25201%2520car%2520in%2520team%2520garage%252C%2520iconic%2520red%2520livery%252C%2520professional%2520lighting%252C%2520clean%2520environment%252C%2520high-end%2520racing%2520technology%2520visible%252C%2520team%2520mechanics%2520working%252C%2520dramatic%2520composition&width=800&height=600&seq=ferrari&orientation=landscape" alt="Ferrari" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white mb-1">Scuderia Ferrari</h3>
+<p class="text-gray-200">Maranello, Italy</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-sm text-gray-500">Team Principal</span>
+<p class="font-medium text-secondary">Frédéric Vasseur</p>
+</div>
+<div class="text-right">
+<span class="text-sm text-gray-500">Championships</span>
+<p class="font-medium text-secondary">16</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">16</span>
+</div>
+<span class="ml-3 text-gray-700">Charles Leclerc</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">55</span>
+</div>
+<span class="ml-3 text-gray-700">Carlos Sainz</span>
+</div>
+</div>
+<a href="#" class="mt-6 block text-center bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Team Details</a>
+</div>
+</div>
+<!-- Mercedes -->
+<div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Mercedes%2520AMG%2520Formula%25201%2520car%2520in%2520team%2520garage%252C%2520silver%2520arrows%2520livery%252C%2520professional%2520lighting%252C%2520clean%2520environment%252C%2520high-end%2520racing%2520technology%2520visible%252C%2520team%2520mechanics%2520working%252C%2520dramatic%2520composition&width=800&height=600&seq=mercedes&orientation=landscape" alt="Mercedes" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white mb-1">Mercedes-AMG Petronas</h3>
+<p class="text-gray-200">Brackley, United Kingdom</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-sm text-gray-500">Team Principal</span>
+<p class="font-medium text-secondary">Toto Wolff</p>
+</div>
+<div class="text-right">
+<span class="text-sm text-gray-500">Championships</span>
+<p class="font-medium text-secondary">8</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">44</span>
+</div>
+<span class="ml-3 text-gray-700">Lewis Hamilton</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">63</span>
+</div>
+<span class="ml-3 text-gray-700">George Russell</span>
+</div>
+</div>
+<a href="#" class="mt-6 block text-center bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Team Details</a>
+</div>
+</div>
+<!-- McLaren -->
+<div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=McLaren%2520Formula%25201%2520car%2520in%2520team%2520garage%252C%2520papaya%2520orange%2520livery%252C%2520professional%2520lighting%252C%2520clean%2520environment%252C%2520high-end%2520racing%2520technology%2520visible%252C%2520team%2520mechanics%2520working%252C%2520dramatic%2520composition&width=800&height=600&seq=mclaren&orientation=landscape" alt="McLaren" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white mb-1">McLaren Racing</h3>
+<p class="text-gray-200">Woking, United Kingdom</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-sm text-gray-500">Team Principal</span>
+<p class="font-medium text-secondary">Andrea Stella</p>
+</div>
+<div class="text-right">
+<span class="text-sm text-gray-500">Championships</span>
+<p class="font-medium text-secondary">8</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">4</span>
+</div>
+<span class="ml-3 text-gray-700">Lando Norris</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">81</span>
+</div>
+<span class="ml-3 text-gray-700">Oscar Piastri</span>
+</div>
+</div>
+<a href="#" class="mt-6 block text-center bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Team Details</a>
+</div>
+</div>
+<!-- Aston Martin -->
+<div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Aston%2520Martin%2520Formula%25201%2520car%2520in%2520team%2520garage%252C%2520british%2520racing%2520green%2520livery%252C%2520professional%2520lighting%252C%2520clean%2520environment%252C%2520high-end%2520racing%2520technology%2520visible%252C%2520team%2520mechanics%2520working%252C%2520dramatic%2520composition&width=800&height=600&seq=astonmartin&orientation=landscape" alt="Aston Martin" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white mb-1">Aston Martin F1</h3>
+<p class="text-gray-200">Silverstone, United Kingdom</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-sm text-gray-500">Team Principal</span>
+<p class="font-medium text-secondary">Mike Krack</p>
+</div>
+<div class="text-right">
+<span class="text-sm text-gray-500">Championships</span>
+<p class="font-medium text-secondary">0</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">14</span>
+</div>
+<span class="ml-3 text-gray-700">Fernando Alonso</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">18</span>
+</div>
+<span class="ml-3 text-gray-700">Lance Stroll</span>
+</div>
+</div>
+<a href="#" class="mt-6 block text-center bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Team Details</a>
+</div>
+</div>
+<!-- Alpine -->
+<div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+<div class="h-64 relative overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Alpine%2520Formula%25201%2520car%2520in%2520team%2520garage%252C%2520blue%2520and%2520pink%2520livery%252C%2520professional%2520lighting%252C%2520clean%2520environment%252C%2520high-end%2520racing%2520technology%2520visible%252C%2520team%2520mechanics%2520working%252C%2520dramatic%2520composition&width=800&height=600&seq=alpine&orientation=landscape" alt="Alpine" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<h3 class="text-2xl font-bold text-white mb-1">Alpine F1 Team</h3>
+<p class="text-gray-200">Enstone, United Kingdom</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="text-sm text-gray-500">Team Principal</span>
+<p class="font-medium text-secondary">Bruno Famin</p>
+</div>
+<div class="text-right">
+<span class="text-sm text-gray-500">Championships</span>
+<p class="font-medium text-secondary">2</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">10</span>
+</div>
+<span class="ml-3 text-gray-700">Pierre Gasly</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<span class="font-medium text-secondary">31</span>
+</div>
+<span class="ml-3 text-gray-700">Esteban Ocon</span>
+</div>
+</div>
+<a href="#" class="mt-6 block text-center bg-primary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Team Details</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Stats Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Team Statistics</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Compare the performance of Formula 1 teams across various metrics in the 2025 season.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Points Chart -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h3 class="text-xl font-bold text-secondary mb-6">Constructor Standings</h3>
+<div id="pointsChart" class="w-full h-80"></div>
+</div>
+<!-- Wins Chart -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h3 class="text-xl font-bold text-secondary mb-6">Race Wins Distribution</h3>
+<div id="winsChart" class="w-full h-80"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white py-12 border-t border-gray-200">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="index.html" class="flex items-center mb-4">
+<span class="text-3xl font-['Pacifico'] text-primary">F1</span>
+<span class="ml-2 font-bold text-secondary text-xl">RACING</span>
+</a>
+<p class="text-gray-600 mb-4">The ultimate destination for Formula 1 fans, providing comprehensive coverage of the world's most prestigious motorsport.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-secondary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-secondary mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+<li><a href="about.html" class="text-gray-600 hover:text-primary">About</a></li>
+<li><a href="blog.html" class="text-gray-600 hover:text-primary">Blog</a></li>
+<li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold text-secondary mb-4">Explore</h3>
+<ul class="space-y-2">
+<li><a href="team.html" class="text-gray-600 hover:text-primary">Teams</a></li>
+<li><a href="driver.html" class="text-gray-600 hover:text-primary">Drivers</a></li>
+<li><a href="car.html" class="text-gray-600 hover:text-primary">Cars</a></li>
+<li><a href="meme.html" class="text-gray-600 hover:text-primary">Memes</a></li>
+<li><a href="quotes.html" class="text-gray-600 hover:text-primary">Quotes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold text-secondary mb-4">Contact Us</h3>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="ml-2 text-gray-600">Formula 1 Headquarters, London, UK</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+<i class="ri-mail-line"></i>
+</div>
+<span class="ml-2 text-gray-600">info@f1racing.com</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 mt-1 flex items-center justify-center text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span class="ml-2 text-gray-600">+44 123 456 7890</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-600 text-sm mb-4 md:mb-0">© 2025 F1 Racing. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-600 hover:text-primary text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-600 hover:text-primary text-sm">Terms of Service</a>
+<a href="#" class="text-gray-600 hover:text-primary text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js">
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+  // Speed Chart
+  const speedChart = echarts.init(document.getElementById("speedChart"));
+  const speedOption = {
+    animation: false,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "shadow",
+      },
+    },
+    grid: {
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
+      containLabel: true,
+    },
+    xAxis: {
+      type: "category",
+      data: ["Red Bull", "Ferrari", "Mercedes", "McLaren"],
+    },
+    yAxis: {
+      type: "value",
+      name: "km/h",
+    },
+    series: [
+      {
+        name: "Top Speed",
+        type: "bar",
+        data: [370, 365, 368, 362],
+        itemStyle: {
+          color: "#E10600",
+        },
+        barWidth: "40%",
+      },
+    ],
+  };
+  speedChart.setOption(speedOption);
+  // Acceleration Chart
+  const accelerationChart = echarts.init(
+    document.getElementById("accelerationChart"),
+  );
+  const accelerationOption = {
+    animation: false,
+    tooltip: {
+      trigger: "axis",
+    },
+    grid: {
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
+      containLabel: true,
+    },
+    xAxis: {
+      type: "category",
+      data: ["Red Bull", "Ferrari", "Mercedes", "McLaren"],
+      axisLabel: {
+        interval: 0,
+      },
+    },
+    yAxis: {
+      type: "value",
+      name: "seconds",
+      inverse: true,
+    },
+    series: [
+      {
+        name: "0-100 km/h",
+        type: "line",
+        data: [2.4, 2.5, 2.45, 2.6],
+        symbol: "none",
+        smooth: true,
+        lineStyle: {
+          width: 3,
+          color: "#E10600",
+        },
+        areaStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: "rgba(225, 6, 0, 0.3)",
+            },
+            {
+              offset: 1,
+              color: "rgba(225, 6, 0, 0.1)",
+            },
+          ]),
+        },
+      },
+    ],
+  };
+  accelerationChart.setOption(accelerationOption);
+  // Responsive charts
+  window.addEventListener("resize", function () {
+    speedChart.resize();
+    accelerationChart.resize();
+  });
+  // Points Chart
+  const pointsChart = echarts.init(document.getElementById("pointsChart"));
+  const pointsOption = {
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "shadow",
+      },
+    },
+    grid: {
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
+      containLabel: true,
+    },
+    xAxis: {
+      type: "value",
+      boundaryGap: [0, 0.01],
+    },
+    yAxis: {
+      type: "category",
+      data: [
+        "Red Bull",
+        "Ferrari",
+        "Mercedes",
+        "McLaren",
+        "Aston Martin",
+        "Alpine",
+      ],
+    },
+    series: [
+      {
+        name: "Points",
+        type: "bar",
+        data: [860, 610, 590, 450, 280, 120],
+        itemStyle: {
+          color: "#E10600",
+        },
+      },
+    ],
+  };
+  pointsChart.setOption(pointsOption);
+  // Wins Chart
+  const winsChart = echarts.init(document.getElementById("winsChart"));
+  const winsOption = {
+    tooltip: {
+      trigger: "item",
+    },
+    legend: {
+      orient: "vertical",
+      left: "left",
+    },
+    series: [
+      {
+        name: "Race Wins",
+        type: "pie",
+        radius: "50%",
+        data: [
+          { value: 19, name: "Red Bull" },
+          { value: 4, name: "Ferrari" },
+          { value: 2, name: "Mercedes" },
+          { value: 1, name: "McLaren" },
+          { value: 0, name: "Aston Martin" },
+          { value: 0, name: "Alpine" },
+        ],
+        emphasis: {
+          itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: "rgba(0, 0, 0, 0.5)",
+          },
+        },
+      },
+    ],
+  };
+  winsChart.setOption(winsOption);
+  // Responsive charts
+  window.addEventListener("resize", function () {
+    pointsChart.resize();
+    winsChart.resize();
+  });
+});
+</script>
+</body>
+</html>
